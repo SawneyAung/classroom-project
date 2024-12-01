@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/phosphor-icons@2.0.0/dist/phosphor.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <ul class="top-sidebar">
+            <img src="sources/dit-removebg-preview.png" alt="">
+            <li>
+                <a href="#"></a>
+                    <span class="icons">
+                        <i class="ph ph-list"></i>                    
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#"></a>
+                    <span class="icons">
+                        <i class="ph ph-plus"></i>                    
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+        <hr class="divider">
+        
+        <ul>
+            <li>
+                <a href="#" class="active">
+                    <span class="icons" id="active">
+                        <i class="ph ph-house"></i>
+                    </span>
+                </a>
+                <span class="icon-text">Home</span>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icons">
+                        <i class="ph ph-books"></i>
+                    </span>
+                </a>
+                <span class="icon-text"></span>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icons">
+                        <i class="ph ph-calendar"></i>
+                    </span>
+                </a>
+                <span class="icon-text"></span>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icons">
+                        <i class="ph ph-list-checks"></i>
+                    </span>
+                </a>
+                <span class="icon-text"></span>
+            </li>
+        </ul>
+        <div class="sidebar-settings">
+            <a href="#">
+                <span class="icons">
+                    <i class="ph ph-gear"></i>
+                    <span class="icon-text"></span>
+                </span>
+            </a>
+        </div>
+    </nav>
+    <div class="content">
+
+        <!-- Profile Card -->
+        <div class="profile-card">
+                <img src="sources/User-Avatar.png" alt="">
+                <ul>
+                    <li><h2>John Doe</h2></li>
+                    <li><p>ID: <a href="#">6609063</a></p></li>
+                    <li><p>Major: <a href="#">Digital Innovation Technology</a></p></li>
+                </ul>
+                <div class="gpa-circle">
+                    <p>4.0 GPA</p>
+                </div>
+        </div>
+
+        <!-- Content Sections -->
+        <div class="content-sections">
+            <div class="left-column">
+
+                <!-- Notifications -->
+                <div class="notification">
+                    <h2>Notifications</h2>
+                    <div class="notification-card">
+                        <ul>
+                            <li id="date">8 November 2024</li>
+                            <li id="course-name">DIT109 Web Design and Development</li>
+                            <li id="notification">A new post has been uploaded.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Ongoing Courses -->
+                <div class="ongoing-courses">
+                    <h2>Ongoing Courses</h2>
+                    <div class="courses-cards">
+                        <h1>DIT102:<br> Programming II</h1>
+                        <h1>DIT109:<br> Web Design and Development</h1>
+                        <h1>DIT101:<br> Programming I</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="right-column">
+                <!-- Calendar -->
+                <div class="calendar">
+                    <h2>Calendar</h2>
+
+                    <!-- Month Navigation Bar -->
+                    <div class="month-navbar">
+                        <button id="prevBtn">
+                            <i class="ph ph-caret-left"></i>
+                        </button>
+                        <div class="monthYear" id="monthYear"></div>
+                        <button id="nextBtn">
+                            <i class="ph ph-caret-right"></i>
+                        </button>
+                    </div>
+                    <div class="days">
+                        <div class="day">Mon</div>
+                        <div class="day">Tue</div>
+                        <div class="day">Wed</div>
+                        <div class="day">Thu</div>
+                        <div class="day">Fri</div>
+                        <div class="day">Sat</div>
+                        <div class="day">Sun</div>
+                    </div>
+                    <div class="dates" id="dates"></div>
+                </div>
+
+                <!-- Upcoming Due Dates -->
+                <div class="upcoming-due-dates">
+                    <h2>Upcoming Due Dates</h2>
+                    <div class="UDD-card">
+                        <ul>
+                            <li id="date">12 November 2024</li>
+                            <li id="course-name">DIT109: Color Palette</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content -->
+
+
+    <!-- Script -->
+    <script src="main.js"></script>
+</body>
+</html>

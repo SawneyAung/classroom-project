@@ -1,0 +1,412 @@
+/* Basic reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'rsu regular', sans-serif;
+    display: flex;
+    color: black;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 72px;
+    background-color: white;
+    height: 100vh;
+    padding-top: 20px;
+    color: white;
+    align-items: center;
+    border-right: 1px solid #cac4c0;
+    justify-content: space-between; 
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar li {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center-align icon and text */
+    justify-content: center; /* Center the content */
+    margin: 0 7px; /* Add space on the left and right */
+}
+.sidebar a.active{
+    color: rgb(0, 0, 0);
+    background-color: rgb(147, 153, 162, 50%);
+    border-radius: 100px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    align-items: center;
+}
+
+.sidebar .top-sidebar li{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.sidebar .top-sidebar li:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(147, 153, 162, 50%);
+    border-radius: 100px;
+    align-items: center;
+    margin: 0 7px;
+    transition: background-color 0.3s ease;
+}
+
+/* Sidebar settings (last item at the bottom) */
+.sidebar-settings {
+    margin-top: auto; /* Push it to the bottom */
+}
+
+.sidebar-settings a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Stack icon and text */
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.sidebar-settings a:hover {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+
+.sidebar img {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 54px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.sidebar i{
+    font-size: 24px; /* Adjust the size of the icons */
+    margin-right: auto; /* Add spacing between icon and text */
+    margin-left: auto;
+    color: black;
+}
+
+.sidebar hr.divider{
+    margin: 10px 0;
+}
+
+/* Align text and icon vertically */
+.icons i {
+    font-size: 24px; /* Adjust icon size */
+    margin-left: auto; /* Add space between icon and text */
+    margin-right: auto;
+}
+
+.icon-text {
+    font-size: 16px; /* Adjust text size */
+    color: black;
+    font-family: 'rsu regular';
+}
+
+/* Default style for all icons */
+.sidebar li a .icons i,
+.sidebar-settings a .icons i {
+    opacity: 0.5; /* Reduced visibility by default */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Full opacity for the active icon */
+.sidebar li a.active .icons i,
+.sidebar-settings a.active .icons i {
+    opacity: 1; /* Fully visible */
+}
+
+/* Increase opacity on hover (for non-active items) */
+.sidebar li a:hover .icons i:not(.active),
+.sidebar-settings a:hover .icons i:not(.active) {
+    opacity: 1; /* Fully visible on hover */
+}
+
+/* Content section */
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #dfe7f4;
+}
+
+/* Profile Card */
+.profile-card {
+    background-color: rgb(147, 153, 162, 15%);
+    padding: 10px;
+    color: black;
+    border-radius: 20px;
+    display: flex; /* Use Flexbox */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: flex-start; /* Align items at the start of the container */
+    align-items: center; /* Center items vertically */
+    width: auto;
+}
+
+.profile-card img {
+    width: 100px;  /* Adjust image size */
+    height: 100px; /* Adjust image size */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 50%; /* Optional: Makes the image circular */
+}
+
+.profile-card ul {
+    margin-top: 0; /* Remove top margin */
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Align list items vertically */
+    justify-content: center; /* Center content vertically */
+}
+
+.profile-card li {
+    margin: 5px 0; /* Add spacing between list items */
+}
+
+.profile-card h2, .profile-card p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.profile-card h2 {
+    font-size: 24px;  /* Adjust font size */
+}
+
+.profile-card a {
+    font-size: 20px;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.profile-card p {
+    font-size: 20px;
+}
+
+.gpa-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4c9ce0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 20px; /* Add space between GPA circle and profile details */
+}
+
+/* Content Sections */
+
+.content-sections{
+    display: grid; /* Use Flexbox */
+    flex-direction: column; /* Align items horizontally */
+    justify-content: space-between; /* Align items at the start of the container */
+    align-items: left; /* Center items vertically */
+    width: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column; /* Ensures content in each column stacks vertically */
+  gap: 20px; /* Adds spacing between elements in the column */
+}
+
+/* Notification Card*/
+
+.notification h2, 
+.ongoing-courses h2, 
+.calendar h2,
+.upcoming-due-dates h2{
+    margin-top: 10px;
+    color: black;
+    font-size: 48px;
+}
+
+.notification-card{
+    background-color: rgb(147, 153, 162, 15%);
+    padding: 10px;
+    color: black;
+    border-radius: 20px;
+    display: flex; /* Use Flexbox */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: flex-start; /* Align items at the start of the container */
+    align-items: center; /* Center items vertically */
+    width: auto;
+}
+
+.notification-card ul{
+    margin-top: 0; /* Remove top margin */
+    padding-left: 20px;
+    padding-top: 7px;
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Align list items vertically */
+    justify-content: center; /* Center content vertically */
+}
+
+.notification-card #date{
+    color: rgb(0, 0, 0, 50%);
+}
+
+.notification-card #course-name {
+    font-size: 32px;
+}
+
+.notification-card #notification {
+    font-size: 20px;
+}
+
+/* Calendar */
+
+.calendar {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.month-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(147, 153, 162, 15%);
+    border-radius: 30px;
+}
+
+.monthYear {
+    text-align: center;
+    font-weight: 600;
+    width: 150px;
+}
+
+.month-navbar button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: none;
+    height: 24px;
+    width: 24px;
+}
+
+.month-navbar button:hover {
+    background-color: rgb(147, 153, 162, 50%);
+    transition: 0.2s;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+    text-align: center;
+    padding: 5px;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: 0.2s;
+}
+
+.date:hover, .date.active {
+    background: #429CFF;
+    color: white;
+}
+
+.date.inactive {
+    color: rgb(0, 0, 0, 50%);
+}
+
+/* Ongoing Courses */
+
+.courses-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Aligns items vertically */
+    text-align: center;
+    gap: 10px; /* Adds consistent spacing between cards */
+}
+
+.courses-cards h1{
+    font-size: 40px;
+    color: black;
+    background-color: rgb(147, 153, 162, 15%);
+    border-radius: 20px;
+    display: flex; /* Use Flexbox */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 340px;
+    height: 245px;
+}
+
+/* Upcoming Due Dates */
+
+.UDD-card {
+    color: black;
+    border-radius: 20px;
+    display: flex; /* Use Flexbox */
+    justify-content: flex-start; /* Align items at the start of the container */
+    align-items: center; /* Center items vertically */
+    width: auto;
+}
+
+.UDD-card ul{
+    margin-top: 0; /* Remove top margin */
+    padding-left: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Align list items vertically */
+    justify-content: center; /* Center content vertically */
+}
+
+.UDD-card #date{
+    color: rgb(0, 0, 0, 50%);
+}
+
+.UDD-card #course-name {
+    font-size: 32px;
+}
