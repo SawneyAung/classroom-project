@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/phosphor-icons@2.0.0/dist/phosphor.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="sidebar">
+        <ul class="top-sidebar">
+            <img src="sources/dit-removebg-preview.png" alt="">
+            <li>
+                <a href="#"></a>
+                    <span class="icons">
+                        <i class="ph ph-list"></i>                    
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#"></a>
+                    <span class="icons">
+                        <i class="ph ph-plus"></i>                    
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+        <hr class="divider">
+        
+        <ul>
+            <li>
+                <a href="index.html">
+                    <span class="icons">
+                        <i class="ph ph-house"></i>
+                    </span>
+                </a>
+                <span class="icon-text"></span>
+            </li>
+            <li>
+                <a href="#" class="active">
+                    <span class="icons" id="active">
+                        <i class="ph ph-books"></i>
+                    </span>
+                </a>
+                <span class="icon-text">Courses</span>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icons">
+                        <i class="ph ph-calendar"></i>
+                    </span>
+                </a>
+                <span class="icon-text"></span>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icons">
+                        <i class="ph ph-list-checks"></i>
+                    </span>
+                </a>
+                <span class="icon-text"></span>
+            </li>
+        </ul>
+        <div class="sidebar-settings">
+            <a href="#">
+                <span class="icons">
+                    <i class="ph ph-gear"></i>
+                    <span class="icon-text"></span>
+                </span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+
+        <h2>Courses</h2>
+        <!-- Search Options -->
+
+        <div class="search-options">
+
+            <div class="search-bar">
+                <i class="ph ph-magnifying-glass"></i>
+                <input type="search" placeholder="Search Course..." id="searchBar">
+            </div>
+
+            <div class="filter">
+                <i class="ph ph-funnel"></i>
+                <label for="filter">Filter by:</label>
+                <select name="filter" class="custom-dropdown" id="filter">
+                    <option value="option1">option 1</option>
+                    <option value="option1">option 1</option>
+                    <option value="option1">option 1</option>
+                </select>
+            </div>
+
+            <div class="sort">
+                <i class="ph ph-arrows-vertical"></i>
+                <label for="sort">Sort by:</label>
+                <select name="sort" class="custom-dropdown" id="sort">
+                    <option value="option1">option 1</option>
+                    <option value="option1">option 1</option>
+                    <option value="option1">option 1</option>
+                </select>
+            </div>
+
+        </div>
+
+        <!-- Cards -->
+
+        <Section class="cards-container">
+            <div class="courses-page-cards">
+                <div class="cc-left-col">
+                    <h3>DIT102 - Programming II</h3>
+                    <h5>Aj. Karn</h5>
+                    <div class="container">
+                        <div class="pb-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                    <h6 id="progess-text">80%</h6>
+                    </div>
+                </div>
+
+                <div class="cc-right-col">
+                    <button class="cc-qa-btn">
+                        <i class="ph ph-eye"></i>
+                        <h6>View Course</h6>
+                    </button>
+                    
+
+                    <button class="cc-qa-btn">
+                        <i class="ph ph-clipboard-text"></i>
+                        <h6>Assignments</h6>
+                    </button>
+
+                    <button class="cc-qa-btn">
+                        <i class="ph ph-megaphone"></i>
+                        <h6>Announcements</h6>
+                    </button>
+                </div>
+
+                <button class="cc-btn">
+                    <i class="ph ph-dots-three-vertical"></i>
+                </button>
+            </div>
+        </Section>
+    </div>
+
+    <!-- Script -->
+    <script src="main.js"></script>
+</body>
+</html>

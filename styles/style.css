@@ -216,7 +216,7 @@ body {
     display: grid; /* Use Flexbox */
     flex-direction: column; /* Align items horizontally */
     justify-content: space-between; /* Align items at the start of the container */
-    align-items: left; /* Center items vertically */
+    align-items: left;
     width: auto;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -234,7 +234,8 @@ body {
 .notification h2, 
 .ongoing-courses h2, 
 .calendar h2,
-.upcoming-due-dates h2{
+.upcoming-due-dates h2,
+.content h2{
     margin-top: 10px;
     color: black;
     font-size: 48px;
@@ -410,3 +411,223 @@ body {
 .UDD-card #course-name {
     font-size: 32px;
 }
+
+/* COURSES PAGE */
+
+.search-options {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+/* Search bar */
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 3px 10px;
+    width: 400px;
+    background-color: #fff;
+}
+
+.search-bar i {
+    margin-right: 10px; /* Space between icon and input */
+    margin-left: 10px;
+    color: #aaa; /* Icon color */
+    font-size: 16px; /* Adjust icon size */
+  }
+
+.search-bar input{
+    border: none; /* Remove default input border */
+    outline: none; /* Remove focus outline */
+    flex: 1; /* Take remaining space */
+    font-size: 18px; /* Input font size */
+    padding: 3px; /* Padding inside input field */
+}
+
+.search-bar input::placeholder {
+    color: #aaa;
+}
+
+/* Filter, Sort */
+
+.filter, .sort {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+
+.filter label, .filter i, .sort label, .sort i{
+    font-size: 26px;
+    font-style: bold;
+}
+
+.filter label , .sort label{
+    margin-top: 9px;
+}
+
+.filter select , .sort select{
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 3px 10px;
+    width: 152px;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Custom Dropdown for Filter, Sort */
+.custom-dropdown {
+    appearance: none; /* Removes the default dropdown arrow */
+    -webkit-appearance: none; /* Ensures compatibility with WebKit browsers */
+    -moz-appearance: none; /* Ensures compatibility with Firefox */
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="%23000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>') no-repeat right 10px center;
+    background-size: 12px; /* Adjust the size of the arrow */
+    padding: 10px 40px 10px 10px; /* Adds padding to fit the arrow */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 5px; /* Rounded edges */
+    font-size: 16px; /* Font styling */
+    color: #aaa; /* Text color */
+}
+
+.custom-dropdown option {
+    background-color: #f0f0f0; /* Background color of the options */
+    color: #333; /* Text color of the options */
+    font-size: 16px; /* Font size for the options */
+    padding: 10px; /* Padding inside options */
+}
+
+.custom-dropdown option:hover {
+    background-color: #007bff; /* Highlighted background on hover */
+    color: #fff; /* Highlighted text color */
+    transition: 0.2s;
+}
+
+/* Courses Page Cards */
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.courses-page-cards {
+    color: black;
+    background-color: rgb(147, 153, 162, 15%);
+    border-radius: 20px;
+    display: flex; /* Use Flexbox */
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 20px;
+    width: 100%;
+}
+
+.cc-left-col {
+    padding: 10px;
+    justify-content: left;
+}
+
+/* Progess Bar */
+
+.container {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 10px;
+}
+
+.pb-container {
+    margin-top: 5px;
+    width: 80%; /* Full width of the progress bar container */
+    background-color: rgba(128, 128, 128, 0.5); /* Light gray background */
+    border-radius: 25px; /* Rounded corners */
+    position: relative; /* Ensure relative positioning for child elements */
+    height: 5px; /* Height of the progress bar */
+}
+
+.progress-bar {
+    background-color: #007bff; /* Blue color for progress */
+    height: 100%; /* Matches the height of the container */
+    border-radius: 25px; /* Rounded corners */
+    width: 0%; /* Initial width */
+    animation: progress-animation 5s forwards; 
+}
+
+.container h6{
+    font-size: 16px; /* Adjust font size */
+    color: #333; /* Text color */
+}
+
+@keyframes progress-animation {
+    from {
+    width: 0%;
+    }
+    to {
+    width: 80%;
+    }
+}
+
+.cc-right-col {
+    margin-left: 50%;
+    justify-content: space-between;
+    align-items: right;
+}
+
+.cc-qa-btn{
+    margin-top: 30px;
+    margin-right: 70px;
+    border: none;
+    background: none;
+}
+
+.cc-qa-btn i {
+    font-size: 24px;
+    padding: 24px;
+    background: rgb(128, 128, 128, 40%);
+    border: 1px none;
+    border-radius: 50%;
+}
+
+.cc-qa-btn i:hover,
+.cc-qa-btn h6:hover{
+    color: white;
+    transition: 0.2s;
+}
+
+
+.cc-qa-btn i:hover{
+    background: rgb(128, 128, 128, 60%);
+    transition: 0.2s;
+}
+
+.cc-qa-btn h6 {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.cc-qa-btn:focus, .cc-btn:focus{
+    outline: none;
+}
+
+.cc-btn {
+    margin-left: 60px;
+    height: 40px;
+    align-self: center;
+    border: none;
+    background: none;
+    font-size: 40px;
+    font-style: bold;
+    opacity: 50%;
+}
+
+.cc-btn:hover {
+    opacity: 100%;
+    transition: 0.2s;
+}
+
